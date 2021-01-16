@@ -1,20 +1,14 @@
-export default () => <div>
-    <style jsx>{`
-    h1 {
-        font-size:60px;
-        font-weight: bold;
-        text-align:right;
-        letter-spacing:-8px;
-        color:#f0f0f0;
-        margin: -32px 0;
-    }
-    p{
-        margin:0;
-        color:#666;
-        font-size:16px;
-    }
-    `}</style>
+import Link from 'next/link';
+import Layout from '../components/Layout';
+import Image from '../static/Image';
 
-    <h1>Next.js</h1>
-    <div>Welcome to next.js</div>
-</div>
+export default () => (
+    <Layout header='Next' title='Top page.'>
+        <p>Welcome to next.js!</p>
+        <Image fname='image.jpg' size='250' />
+        <hr />
+        <Link href='./other'>
+            <button>go to Other &gt;&gt;</button>
+        </Link>
+    </Layout>
+);
